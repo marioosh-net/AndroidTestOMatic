@@ -7,5 +7,6 @@
     <string name="send">Send</string>
     <string name="title_messagebox">My Message</string>
     <string name="edit_message">Message here</string>
+    <string name="clear">Clear</string>
 
 </resources>

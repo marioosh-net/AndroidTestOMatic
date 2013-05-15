@@ -30,10 +30,16 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/linearLayout1"
-            android:layout_below="@+id/linearLayout1"
             android:onClick="click"
             android:text="@string/send" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clear"
+            android:text="@string/clear" />
+
     </LinearLayout>
 
 </RelativeLayout>

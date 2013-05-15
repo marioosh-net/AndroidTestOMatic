@@ -3,10 +3,13 @@ package com.example.androidtestomatic;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
@@ -18,7 +21,14 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+    	super.onPostCreate(savedInstanceState);
+        EditText editText = (EditText) findViewById(R.id.text1);
+        Log.d("",editText.toString());
+        editText.addTextChangedListener(new TextValidator(editText));
+    }
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -35,4 +45,36 @@ public class MainActivity extends Activity {
     	startActivity(intent);
     }
     
+    public void clear(View view) {
+    	((EditText)findViewById(R.id.text1)).setText("");
+    	Log.d("button", "clear");
+    }
+
+}
+
+
+class TextValidator implements TextWatcher {
+
+	private TextView editText;
+	
+	public TextValidator(TextView editText) {
+		this.editText = editText;
+	}
+	
+	@Override
+	public void afterTextChanged(Editable s) {
+		if(editText.getText().toString().length() > 5) {
+			editText.setError("max 5 characters!");
+		}
+	}
+
+	@Override
+	public void beforeTextChanged(CharSequence s, int start, int count,
+			int after) {
+	}
+
+	@Override
+	public void onTextChanged(CharSequence s, int start, int before, int count) {
+	}
+	
 }
