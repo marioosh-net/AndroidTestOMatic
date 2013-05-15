@@ -38,9 +38,13 @@ public class MainActivity extends Activity {
     
     public void click(View view) {
     	Log.d("button","click");
-    	Intent intent = new Intent(this, DisplayMessageActivity.class);
     	EditText editText = (EditText) findViewById(R.id.text1);
     	String message = editText.getText().toString();
+    	if(message.length() < 1) {
+    		editText.setError("Can't be empty!");
+    		return;
+    	}
+    	Intent intent = new Intent(this, DisplayMessageActivity.class);
     	intent.putExtra(EXTRA_MESSAGE, message);
     	startActivity(intent);
     }
@@ -63,8 +67,8 @@ class TextValidator implements TextWatcher {
 	
 	@Override
 	public void afterTextChanged(Editable s) {
-		if(editText.getText().toString().length() > 5) {
-			editText.setError("max 5 characters!");
+		if(editText.getText().toString().length() > 10) {
+			editText.setError("max 10 characters!");
 		}
 	}
 
