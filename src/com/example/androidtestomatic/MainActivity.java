@@ -155,6 +155,7 @@ public class MainActivity extends Activity {
     }
     
     int request_Code = 1;
+    int request_Code2 = 2;
     
     /**
      * start activity that return result
@@ -172,6 +173,16 @@ public class MainActivity extends Activity {
     			Toast.makeText(this,data.getData().toString(), Toast.LENGTH_SHORT).show();    			
     		}
     	}
+    }
+    
+    public void sendToActivity(View view) {
+    	Intent i = new Intent("com.example.androidtestomatic.ThirdActivity");
+    	EditText editText = (EditText) findViewById(R.id.text1);
+    	i.putExtra("text", editText.getText().toString());
+    	Bundle bundle = new Bundle();
+    	bundle.putString("str", "Dupa jaœ");
+    	i.putExtras(bundle);
+    	startActivityForResult(i, request_Code);
     }
 
 	public void onStart() {

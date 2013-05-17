@@ -98,4 +98,13 @@
         android:onClick="thirdWithResult"
         android:text="@string/third" />
 
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/second"
+        android:layout_below="@+id/second"
+        android:onClick="sendToActivity"
+        android:text="@string/sendToActivity" />
+
 </RelativeLayout>

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ThirdActivity extends Activity {
 
@@ -14,6 +15,12 @@ public class ThirdActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.third);
+		
+		/**
+		 * get passed data
+		 */
+		String passedString = getIntent().getStringExtra("text");
+		Toast.makeText(this,passedString, Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
