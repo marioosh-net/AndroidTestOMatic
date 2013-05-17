@@ -1,5 +1,6 @@
 package com.example.androidtestomatic;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -191,6 +192,10 @@ public class MainActivity extends Activity {
 
     public void fragments(View view) {
     	startActivity(new Intent("com.example.androidtestomatic.fragments"));
+    }
+    
+    public void buildin(View view) {
+    	startActivity(new Intent(android.content.Intent.ACTION_VIEW, Uri.parse("http://www.amazon.com")));
     }
     
 	public void onStart() {

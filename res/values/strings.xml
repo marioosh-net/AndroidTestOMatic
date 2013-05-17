@@ -22,5 +22,6 @@
     <string name="sendToActivity">Send To Activity</string>
     <string name="title_activity_fragments">FragmentsActivity</string>
     <string name="fragments">Fragments</string>
+    <string name="buildin">Build-In Activity</string>
 
 </resources>
