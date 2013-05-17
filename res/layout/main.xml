@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -106,5 +107,15 @@
         android:layout_below="@+id/second"
         android:onClick="sendToActivity"
         android:text="@string/sendToActivity" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button5"
+        android:layout_below="@+id/button5"
+        android:layout_marginTop="44dp"
+        android:onClick="fragments"
+        android:text="@string/fragments" />
 
 </RelativeLayout>

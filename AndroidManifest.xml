@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.androidtestomatic.DisplayMessageActivity"
+            android:name="com.example.androidtestomatic.MessageActivity"
             android:label="@string/title_messagebox"
             android:parentActivityName="com.example.androidtestomatic.MainActivity" >
             <meta-data
@@ -35,6 +35,7 @@
             android:label="@string/title_activity_second" >
             <intent-filter>
                 <action android:name="com.example.androidtestomatic.SecondActivity" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -43,6 +44,14 @@
             android:label="@string/title_activity_third" >
             <intent-filter>
                 <action android:name="com.example.androidtestomatic.ThirdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.androidtestomatic.FragmentsActivity"
+            android:label="@string/title_activity_fragments" >
+            <intent-filter>
+                <action android:name="com.example.androidtestomatic.fragments" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>            
         </activity>

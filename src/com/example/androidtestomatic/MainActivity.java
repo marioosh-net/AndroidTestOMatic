@@ -9,10 +9,13 @@ import android.content.Intent;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +29,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main);
+        RelativeLayout layout = (RelativeLayout) findViewById(R.id.relativelayout);
     }
 
     @Override
@@ -51,7 +55,7 @@ public class MainActivity extends Activity {
     		editText.setError("Can't be empty!");
     		return;
     	}
-    	Intent intent = new Intent(this, DisplayMessageActivity.class);
+    	Intent intent = new Intent(this, MessageActivity.class);
     	intent.putExtra(EXTRA_MESSAGE, message);
     	
     	/**
@@ -185,6 +189,10 @@ public class MainActivity extends Activity {
     	startActivityForResult(i, request_Code);
     }
 
+    public void fragments(View view) {
+    	startActivity(new Intent("com.example.androidtestomatic.fragments"));
+    }
+    
 	public void onStart() {
 		super.onStart();
 		Log.d(tag, "In the onStart() event");

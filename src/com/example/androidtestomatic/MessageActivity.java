@@ -7,7 +7,7 @@ import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class DisplayMessageActivity extends Activity {
+public class MessageActivity extends Activity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

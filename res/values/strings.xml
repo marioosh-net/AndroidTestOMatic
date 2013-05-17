@@ -20,5 +20,7 @@
     <string name="ok">OK</string>
     <string name="third">Get Result</string>
     <string name="sendToActivity">Send To Activity</string>
+    <string name="title_activity_fragments">FragmentsActivity</string>
+    <string name="fragments">Fragments</string>
 
 </resources>
