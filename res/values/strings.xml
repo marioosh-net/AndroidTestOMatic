@@ -8,5 +8,16 @@
     <string name="title_messagebox">My Message</string>
     <string name="edit_message">Message here</string>
     <string name="clear">Clear</string>
+    <string name="exit">Exit</string>
+    <string name="exitText">Kill my app</string>
+    <string name="progress">Progress Dialog</string>
+    <string name="alert">Alert Dialog</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="secondActivity">Start Activity</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <string name="ok">OK</string>
+    <string name="third">Get Result</string>
 
 </resources>

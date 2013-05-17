@@ -30,6 +30,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.androidtestomatic.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.androidtestomatic.SecondActivity"
+            android:label="@string/title_activity_second" >
+            <intent-filter>
+                <action android:name="com.example.androidtestomatic.SecondActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.androidtestomatic.ThirdActivity"
+            android:label="@string/title_activity_third" >
+            <intent-filter>
+                <action android:name="com.example.androidtestomatic.ThirdActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>            
+        </activity>
     </application>
 
 </manifest>
